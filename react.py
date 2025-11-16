@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 from langchain_core.tools import tool
 from langchain_google_vertexai import ChatVertexAI
-from langchain_tavily import TavilySearch
+from langchain_community.tools.tavily_search import TavilySearchResults
 
 load_dotenv()
 
@@ -13,7 +13,7 @@ def triple(num: float) -> float:
     """
     return float(num) * 3
 
-tools = [TavilySearch(max_results=1), triple]
+tools = [TavilySearchResults(max_results=1), triple]
 
 llm = ChatVertexAI(
     model="gemini-2.0-flash",

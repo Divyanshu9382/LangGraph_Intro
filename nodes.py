@@ -6,8 +6,7 @@ from react import llm, tools
 
 load_dotenv()
 
-SYSYEM_MESSAGE =
-"""
+SYSYEM_MESSAGE="""
 You are a helpful assistant that can use tools to answer questions.
 """
 
