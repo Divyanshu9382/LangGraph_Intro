@@ -80,9 +80,10 @@ celerybeat-schedule
 
 # Environments
 .env
-.venv
-env/
+.env.*
+.venv/
 venv/
+env/
 ENV/
 env.bak/
 venv.bak/
@@ -108,11 +109,12 @@ venv.bak/
 .idea/
 *.iml
 
-# Jupyter
-.ipynb_checkpoints/
-
 # macOS
 .DS_Store
 
 # Windows
 Thumbs.db
+
+# Google Cloud Sensitive Keys
+service-account*.json
+credentials.json
